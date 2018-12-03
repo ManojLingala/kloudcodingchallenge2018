@@ -158,7 +158,7 @@ namespace KloudCodingChallenge.Test
             var results = await service.FetchDataAsync();
              
             Assert.Empty(results);
-        }
+        } 
          
     }
 }
