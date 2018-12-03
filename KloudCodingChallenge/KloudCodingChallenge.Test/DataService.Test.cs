@@ -14,7 +14,7 @@ using KloudCodingChallenge.Model.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace KloudCodingChallenge.Test
+namespace KloudCodingChallenge.Test 
 {
     public class DataServiceTest
     {
@@ -66,13 +66,13 @@ namespace KloudCodingChallenge.Test
         [Theory]
         [InlineData(HttpStatusCode.Forbidden)] //4xxx
         [InlineData(HttpStatusCode.InternalServerError)] //
-        public void FetchDataAsync_ShouldWriteLog_WhenExceptionOccurs(HttpStatusCode httpErrorCode)
+        public async Task FetchDataAsync_ShouldWriteLog_WhenExceptionOccurs(HttpStatusCode httpErrorCode)
         {
             var httpClient = MockHttpClient(null, httpErrorCode);
             Mock<ILogger<DataService>> logger = new Mock<ILogger<DataService>>();
 
             IDataService service = new DataService(httpClient, serviceConfig, mockCacheService.Object, logger.Object);
-            var results = service.FetchDataAsync();
+            var results = await service.FetchDataAsync();
 
             logger.Verify(l => l.Log(LogLevel.Error, 0, It.IsAny<FormattedLogValues>(), It.IsAny<Exception>(),It.IsAny<Func<object, Exception, string>>()));
         }
