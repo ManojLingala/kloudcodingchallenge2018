@@ -52,9 +52,9 @@ namespace KloudCodingChallenge.Service.Services
                 List<IOwner> ownersList = null;
                 try
                 {
-                    //var content = this.client.GetStringAsync(GET_CARS_ENDPOINT).Result;
+               
                     var content = await this.client.GetStringAsync(GET_CARS_ENDPOINT);
-                var response = JsonConvert.DeserializeObject<ServiceResponse>(content);
+                    var response = JsonConvert.DeserializeObject<ServiceResponse>(content);
                     ownersList = new List<IOwner>(response);
                 }
                 catch (JsonReaderException ex)
