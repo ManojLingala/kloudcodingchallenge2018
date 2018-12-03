@@ -156,9 +156,9 @@ namespace KloudCodingChallenge.Test
             var httpClient = MockHttpClient(json);
             IDataService service = new DataService(httpClient, serviceConfig, mockCacheService.Object, mockLogger.Object);
             var results = await service.FetchDataAsync();
-
+             
             Assert.Empty(results);
         }
-
+         
     }
 }

@@ -13,4 +13,4 @@ deploy:
   provider: azure_web_apps
 notifications:
   email:
-    - lingalamanojreddy@outlook.com
+    - mkumarreddy85@outlook.com
