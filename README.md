@@ -1,12 +1,4 @@
-# KloudCodingChallenge
-
-Swagger Definition of the API is included [Refer to KloudCodingChallenge.yaml](https://github.com/ManojLingala/kloudcodingchallenge2018/blob/master/kloudcodingchallenge.yaml)
-
- ![Alt text](https://raw.github.com/ManojLingala/Ansible-Playbook/master/Images/SwaggerDefinition.png?raw=true "Swagger")
-
-
- Travis CI is been used for CI/CD and the [![Build Status](https://travis-ci.com/ManojLingala/KloudCodingChallenge.svg?token=qHGtxVoqMSZKGKU3xx3p&branch=master)]
- (https://travis-ci.com/ManojLingala/kloudcodingchallenge2018)
+# NabCodingChallenge
 
 Prerequistie : 
 
